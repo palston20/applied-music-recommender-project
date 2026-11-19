@@ -1,19 +1,172 @@
-id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
-1,Sunrise City,Neon Echo,pop,happy,0.82,118,0.84,0.79,0.18
-2,Midnight Coding,LoRoom,lofi,chill,0.42,78,0.56,0.62,0.71
-3,Storm Runner,Voltline,rock,intense,0.91,152,0.48,0.66,0.10
-4,Library Rain,Paper Lanterns,lofi,chill,0.35,72,0.60,0.58,0.86
-5,Gym Hero,Max Pulse,pop,intense,0.93,132,0.77,0.88,0.05
-6,Spacewalk Thoughts,Orbit Bloom,ambient,chill,0.28,60,0.65,0.41,0.92
-7,Coffee Shop Stories,Slow Stereo,jazz,relaxed,0.37,90,0.71,0.54,0.89
-8,Night Drive Loop,Neon Echo,synthwave,moody,0.75,110,0.49,0.73,0.22
-9,Focus Flow,LoRoom,lofi,focused,0.40,80,0.59,0.60,0.78
-10,Rooftop Lights,Indigo Parade,indie pop,happy,0.76,124,0.81,0.82,0.35
-11,Quiet Constellations,Elian Grey,classical,contemplative,0.22,66,0.38,0.24,0.84
-12,Island Morning,Coral Avenue,reggae,carefree,0.68,96,0.88,0.81,0.29
-13,Backroad Postcard,June Wilder,country,nostalgic,0.53,104,0.62,0.57,0.72
-14,Paper Moons,The Wildflowers,folk,wistful,0.44,88,0.47,0.49,0.91
-15,Iron Horizon,Black Meridian,metal,aggressive,0.96,168,0.31,0.52,0.04
-16,Mirrorball Fever,Velvet Motion,disco,playful,0.86,124,0.91,0.93,0.12
-17,Last Call Blues,Marvin Cole,blues,melancholy,0.39,76,0.28,0.43,0.67
-18,Golden Hour Run,Sol Caribe,reggaeton,confident,0.89,102,0.82,0.95,0.08
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness,year
+1,Blinding Lights,The Weeknd,pop,euphoric,0.8,171,0.33,0.51,0.0,2019
+2,Levitating,Dua Lipa,pop,playful,0.82,103,0.92,0.7,0.01,2020
+3,As It Was,Harry Styles,pop,wistful,0.73,174,0.66,0.52,0.34,2022
+4,Cruel Summer,Taylor Swift,pop,euphoric,0.7,170,0.56,0.55,0.12,2019
+5,Anti-Hero,Taylor Swift,pop,moody,0.64,97,0.53,0.64,0.13,2022
+6,Espresso,Sabrina Carpenter,pop,confident,0.76,104,0.69,0.7,0.11,2024
+7,good 4 u,Olivia Rodrigo,pop,intense,0.66,167,0.69,0.56,0.33,2021
+8,drivers license,Olivia Rodrigo,pop,melancholy,0.44,144,0.13,0.59,0.72,2021
+9,Toxic,Britney Spears,pop,confident,0.84,143,0.92,0.77,0.03,2003
+10,Since U Been Gone,Kelly Clarkson,pop,confident,0.85,131,0.37,0.66,0.0,2004
+11,Umbrella,Rihanna,pop,moody,0.83,174,0.58,0.58,0.01,2007
+12,Hollaback Girl,Gwen Stefani,pop,confident,0.76,110,0.91,0.92,0.36,2005
+13,Promiscuous,Nelly Furtado,pop,playful,0.85,114,0.85,0.81,0.06,2006
+14,Hips Don't Lie,Shakira,pop,playful,0.82,100,0.76,0.78,0.28,2006
+15,Complicated,Avril Lavigne,pop,wistful,0.78,78,0.43,0.59,0.06,2002
+16,Bye Bye Bye,*NSYNC,pop,intense,0.93,173,0.86,0.61,0.03,2000
+17,Teenage Dream,Katy Perry,pop,happy,0.8,120,0.59,0.72,0.02,2010
+18,Dancing On My Own,Robyn,pop,melancholy,0.87,117,0.23,0.68,0.05,2010
+19,Green Light,Lorde,pop,euphoric,0.8,129,0.26,0.54,0.03,2017
+20,bad guy,Billie Eilish,pop,moody,0.43,135,0.56,0.7,0.33,2019
+21,Flowers,Miley Cyrus,pop,confident,0.69,118,0.65,0.71,0.06,2023
+22,Truth Hurts,Lizzo,pop,confident,0.62,158,0.41,0.71,0.11,2017
+23,Golden Hour,JVKE,pop,romantic,0.59,94,0.15,0.52,0.65,2022
+24,Running Up That Hill (A Deal with God),Kate Bush,pop,moody,0.55,108,0.2,0.63,0.06,1985
+25,Plastic Love,Mariya Takeuchi,pop,nostalgic,0.66,103,0.6,0.75,0.2,1984
+26,Wannabe,Spice Girls,pop,playful,0.88,110,0.89,0.76,0.1,1996
+27,I Wanna Dance with Somebody (Who Loves Me),Whitney Houston,pop,euphoric,0.82,119,0.87,0.71,0.2,1987
+28,Dynamite,BTS,k-pop,happy,0.77,114,0.74,0.75,0.01,2020
+29,Pink Venom,BLACKPINK,k-pop,confident,0.7,90,0.75,0.8,0.02,2022
+30,Super Shy,NewJeans,k-pop,playful,0.8,150,0.54,0.78,0.18,2023
+31,Ditto,NewJeans,k-pop,dreamy,0.64,134,0.18,0.81,0.16,2022
+32,LOVE DIVE,IVE,k-pop,confident,0.7,118,0.55,0.7,0.1,2022
+33,No Scrubs,TLC,r&b,confident,0.68,93,0.59,0.74,0.03,1999
+34,Say My Name,Destiny's Child,r&b,moody,0.75,138,0.7,0.71,0.27,1999
+35,Crazy in Love,Beyoncé,r&b,confident,0.76,99,0.68,0.66,0.0,2003
+36,Love On Top,Beyoncé,r&b,happy,0.76,94,0.72,0.66,0.15,2011
+37,Yeah!,Usher,r&b,playful,0.79,105,0.58,0.89,0.02,2004
+38,Let Me Love You,Mario,r&b,romantic,0.55,95,0.56,0.66,0.24,2004
+39,We Belong Together,Mariah Carey,r&b,melancholy,0.46,140,0.38,0.84,0.07,2005
+40,Foolish,Ashanti,r&b,wistful,0.58,90,0.62,0.66,0.24,2002
+41,So Sick,Ne-Yo,r&b,melancholy,0.58,93,0.58,0.45,0.25,2005
+42,Dilemma,Nelly,r&b,romantic,0.55,84,0.62,0.73,0.23,2002
+43,Fallin',Alicia Keys,r&b,melancholy,0.6,96,0.48,0.6,0.25,2001
+44,Ex-Factor,Lauryn Hill,r&b,melancholy,0.52,75,0.35,0.58,0.15,1998
+45,Boo'd Up,Ella Mai,r&b,romantic,0.37,101,0.69,0.6,0.08,2018
+46,Snooze,SZA,r&b,romantic,0.43,143,0.39,0.56,0.14,2022
+47,Kill Bill,SZA,r&b,moody,0.73,89,0.42,0.64,0.05,2022
+48,Best Part,Daniel Caesar,r&b,romantic,0.37,75,0.4,0.47,0.79,2017
+49,Pink + White,Frank Ocean,r&b,dreamy,0.55,160,0.55,0.55,0.67,2016
+50,Thinkin Bout You,Frank Ocean,r&b,wistful,0.35,130,0.2,0.72,0.4,2012
+51,Adorn,Miguel,r&b,romantic,0.43,90,0.62,0.64,0.1,2012
+52,Earned It,The Weeknd,r&b,moody,0.38,120,0.43,0.66,0.38,2015
+53,Untitled (How Does It Feel),D'Angelo,soul,romantic,0.4,96,0.45,0.62,0.3,2000
+54,Leave the Door Open,Silk Sonic,soul,romantic,0.62,148,0.72,0.59,0.18,2021
+55,At Last,Etta James,soul,romantic,0.34,87,0.38,0.27,0.66,1960
+56,Ain't No Mountain High Enough,Marvin Gaye,soul,happy,0.58,130,0.8,0.57,0.4,1967
+57,Lovely Day,Bill Withers,soul,happy,0.65,98,0.7,0.69,0.3,1977
+58,Superstition,Stevie Wonder,funk,confident,0.48,101,0.9,0.64,0.07,1972
+59,Uptown Funk,Mark Ronson,funk,confident,0.61,115,0.93,0.86,0.01,2014
+60,Redbone,Childish Gambino,funk,moody,0.36,160,0.57,0.74,0.17,2016
+61,Get Lucky,Daft Punk,disco,playful,0.81,116,0.86,0.79,0.04,2013
+62,September,"Earth, Wind & Fire",disco,happy,0.83,126,0.98,0.69,0.17,1978
+63,Le Freak,Chic,disco,playful,0.74,120,0.92,0.84,0.08,1978
+64,I Feel Love,Donna Summer,disco,euphoric,0.83,128,0.7,0.75,0.1,1977
+65,Dancing Queen,ABBA,disco,euphoric,0.87,101,0.75,0.54,0.36,1976
+66,Don't Start Now,Dua Lipa,disco,confident,0.79,124,0.68,0.79,0.01,2019
+67,Hey Ya!,OutKast,hip hop,happy,0.97,159,0.97,0.73,0.1,2003
+68,Hot in Herre,Nelly,hip hop,playful,0.74,107,0.91,0.96,0.21,2002
+69,In Da Club,50 Cent,hip hop,confident,0.71,90,0.79,0.9,0.26,2003
+70,Gold Digger,Kanye West,hip hop,playful,0.7,93,0.63,0.63,0.02,2005
+71,Lose Yourself,Eminem,hip hop,intense,0.74,171,0.06,0.69,0.01,2002
+72,HUMBLE.,Kendrick Lamar,hip hop,confident,0.62,150,0.42,0.91,0.0,2017
+73,Money Trees,Kendrick Lamar,hip hop,chill,0.53,144,0.37,0.74,0.07,2012
+74,SICKO MODE,Travis Scott,hip hop,intense,0.73,155,0.45,0.83,0.01,2018
+75,God's Plan,Drake,hip hop,confident,0.45,77,0.36,0.75,0.03,2018
+76,Passionfruit,Drake,hip hop,chill,0.46,112,0.37,0.81,0.26,2017
+77,Sunflower,Post Malone,hip hop,happy,0.48,90,0.91,0.76,0.56,2018
+78,Juicy,The Notorious B.I.G.,hip hop,nostalgic,0.67,95,0.8,0.89,0.1,1994
+79,Electric Relaxation,A Tribe Called Quest,hip hop,relaxed,0.55,93,0.73,0.82,0.15,1993
+80,Nuthin' But a 'G' Thang,Dr. Dre,hip hop,relaxed,0.55,95,0.85,0.8,0.04,1992
+81,Savage,Megan Thee Stallion,hip hop,confident,0.7,84,0.6,0.84,0.02,2020
+82,One More Time,Daft Punk,electronic,euphoric,0.7,123,0.48,0.61,0.02,2000
+83,Strobe,deadmau5,electronic,focused,0.57,128,0.07,0.5,0.01,2009
+84,Titanium,David Guetta,electronic,euphoric,0.79,126,0.3,0.6,0.07,2011
+85,Latch,Disclosure,electronic,romantic,0.73,122,0.52,0.73,0.02,2012
+86,Innerbloom,RÜFÜS DU SOL,electronic,dreamy,0.45,122,0.09,0.66,0.03,2015
+87,Midnight City,M83,electronic,dreamy,0.71,105,0.32,0.51,0.02,2011
+88,Losing It,FISHER,electronic,intense,0.93,125,0.55,0.84,0.01,2018
+89,Turn Down for What,DJ Snake,electronic,intense,0.8,100,0.19,0.8,0.0,2013
+90,Nightcall,Kavinsky,synthwave,moody,0.62,92,0.35,0.58,0.03,2010
+91,Days of Thunder,The Midnight,synthwave,nostalgic,0.72,104,0.45,0.6,0.01,2014
+92,Resonance,HOME,synthwave,nostalgic,0.55,85,0.4,0.62,0.05,2014
+93,Running in the Night,FM-84,synthwave,dreamy,0.66,92,0.4,0.55,0.03,2016
+94,Mr. Brightside,The Killers,rock,euphoric,0.92,148,0.24,0.35,0.0,2004
+95,Seven Nation Army,The White Stripes,rock,intense,0.6,124,0.32,0.74,0.01,2003
+96,Smells Like Teen Spirit,Nirvana,rock,aggressive,0.91,117,0.72,0.5,0.0,1991
+97,Do I Wanna Know?,Arctic Monkeys,rock,moody,0.53,85,0.41,0.55,0.19,2013
+98,505,Arctic Monkeys,rock,romantic,0.85,140,0.23,0.52,0.0,2007
+99,Bohemian Rhapsody,Queen,rock,moody,0.4,72,0.23,0.41,0.29,1975
+100,Everlong,Foo Fighters,rock,intense,0.88,158,0.36,0.41,0.0,1997
+101,Sweet Child O' Mine,Guns N' Roses,rock,euphoric,0.91,125,0.63,0.45,0.09,1987
+102,Misery Business,Paramore,rock,confident,0.93,173,0.52,0.52,0.0,2007
+103,Take Me Out,Franz Ferdinand,rock,confident,0.66,105,0.67,0.54,0.01,2004
+104,Creep,Radiohead,rock,melancholy,0.43,92,0.1,0.52,0.01,1992
+105,Dreams,Fleetwood Mac,rock,dreamy,0.49,120,0.79,0.83,0.06,1977
+106,Feel Good Inc.,Gorillaz,indie,moody,0.7,139,0.77,0.82,0.01,2005
+107,The Less I Know the Better,Tame Impala,indie,playful,0.74,117,0.78,0.64,0.01,2015
+108,Electric Feel,MGMT,indie,playful,0.81,103,0.56,0.76,0.08,2007
+109,Heat Waves,Glass Animals,indie,wistful,0.53,81,0.53,0.76,0.44,2020
+110,Sweater Weather,The Neighbourhood,indie,moody,0.81,124,0.4,0.61,0.05,2012
+111,Apocalypse,Cigarettes After Sex,indie,dreamy,0.47,94,0.17,0.37,0.02,2017
+112,Space Song,Beach House,indie,dreamy,0.52,147,0.21,0.51,0.2,2015
+113,Pumped Up Kicks,Foster the People,indie,playful,0.71,128,0.96,0.73,0.15,2010
+114,Chamber of Reflection,Mac DeMarco,indie,moody,0.45,128,0.3,0.65,0.3,2014
+115,Bags,Clairo,indie,wistful,0.45,140,0.35,0.6,0.4,2019
+116,Coffee,beabadoobee,indie,romantic,0.24,90,0.4,0.7,0.85,2017
+117,Master of Puppets,Metallica,metal,aggressive,0.84,212,0.55,0.54,0.0,1986
+118,Chop Suey!,System of a Down,metal,aggressive,0.93,127,0.26,0.42,0.0,2001
+119,Duality,Slipknot,metal,aggressive,0.96,145,0.2,0.36,0.0,2004
+120,Paranoid,Black Sabbath,metal,intense,0.74,163,0.39,0.43,0.0,1970
+121,Bring Me to Life,Evanescence,metal,intense,0.94,95,0.3,0.33,0.01,2003
+122,Take Five,The Dave Brubeck Quartet,jazz,relaxed,0.26,174,0.6,0.46,0.54,1959
+123,So What,Miles Davis,jazz,relaxed,0.33,136,0.48,0.47,0.67,1959
+124,Fly Me to the Moon,Frank Sinatra,jazz,romantic,0.27,119,0.67,0.67,0.67,1964
+125,My Funny Valentine,Chet Baker,jazz,melancholy,0.1,70,0.12,0.38,0.93,1954
+126,Autumn Leaves,Cannonball Adderley,jazz,wistful,0.25,120,0.35,0.45,0.85,1958
+127,Feeling Good,Nina Simone,jazz,confident,0.26,69,0.35,0.3,0.6,1965
+128,Feather,Nujabes,lofi,chill,0.53,88,0.6,0.8,0.2,2005
+129,Aruarian Dance,Nujabes,lofi,focused,0.45,90,0.55,0.7,0.4,2004
+130,Don't Cry,J Dilla,lofi,chill,0.5,92,0.45,0.65,0.3,2006
+131,Clair de Lune,Claude Debussy,classical,dreamy,0.05,66,0.1,0.25,0.99,1905
+132,Gymnopédie No. 1,Erik Satie,classical,focused,0.03,70,0.16,0.3,0.99,1888
+133,Experience,Ludovico Einaudi,classical,wistful,0.29,85,0.1,0.3,0.95,2013
+134,Nuvole Bianche,Ludovico Einaudi,classical,melancholy,0.12,70,0.1,0.3,0.99,2004
+135,Weightless,Marconi Union,ambient,chill,0.06,60,0.03,0.2,0.95,2011
+136,An Ending (Ascent),Brian Eno,ambient,dreamy,0.1,60,0.1,0.15,0.9,1983
+137,Avril 14th,Aphex Twin,ambient,wistful,0.03,85,0.25,0.4,0.99,2001
+138,Jolene,Dolly Parton,country,melancholy,0.56,111,0.6,0.67,0.57,1973
+139,"Take Me Home, Country Roads",John Denver,country,nostalgic,0.49,82,0.6,0.33,0.57,1971
+140,Tennessee Whiskey,Chris Stapleton,country,romantic,0.37,74,0.51,0.39,0.2,2015
+141,Before He Cheats,Carrie Underwood,country,aggressive,0.83,148,0.31,0.52,0.2,2006
+142,Something in the Orange,Zach Bryan,country,melancholy,0.4,88,0.2,0.4,0.75,2022
+143,Fast Car,Tracy Chapman,folk,wistful,0.43,104,0.54,0.59,0.4,1988
+144,Ho Hey,The Lumineers,folk,happy,0.47,80,0.4,0.69,0.79,2012
+145,Skinny Love,Bon Iver,folk,melancholy,0.37,75,0.2,0.4,0.85,2007
+146,The Night We Met,Lord Huron,folk,melancholy,0.37,87,0.1,0.45,0.9,2015
+147,Rivers and Roads,The Head and the Heart,folk,wistful,0.45,90,0.3,0.4,0.7,2011
+148,Banana Pancakes,Jack Johnson,folk,relaxed,0.38,96,0.65,0.7,0.8,2005
+149,Hey There Delilah,Plain White T's,folk,romantic,0.29,104,0.3,0.65,0.87,2006
+150,Riptide,Vance Joy,folk,happy,0.73,102,0.51,0.48,0.43,2013
+151,Gasolina,Daddy Yankee,reggaeton,intense,0.8,96,0.75,0.86,0.33,2004
+152,Despacito,Luis Fonsi,reggaeton,romantic,0.8,89,0.84,0.65,0.21,2017
+153,Tití Me Preguntó,Bad Bunny,reggaeton,playful,0.72,107,0.19,0.65,0.1,2022
+154,Mi Gente,J Balvin,reggaeton,euphoric,0.78,105,0.3,0.54,0.02,2017
+155,Essence,Wizkid,afrobeats,romantic,0.39,104,0.36,0.61,0.27,2020
+156,Calm Down,Rema,afrobeats,romantic,0.8,107,0.8,0.8,0.38,2022
+157,Last Last,Burna Boy,afrobeats,confident,0.62,85,0.5,0.71,0.15,2022
+158,love nwantiti (ah ah ah),CKay,afrobeats,romantic,0.6,93,0.55,0.74,0.4,2019
+159,Three Little Birds,Bob Marley & The Wailers,reggae,happy,0.46,148,0.8,0.7,0.2,1977
+160,Is This Love,Bob Marley & The Wailers,reggae,romantic,0.47,122,0.75,0.8,0.1,1978
+161,Red Red Wine,UB40,reggae,relaxed,0.55,89,0.85,0.75,0.25,1983
+162,Bam Bam,Sister Nancy,reggae,confident,0.58,93,0.8,0.85,0.1,1982
+163,money machine,100 gecs,hyperpop,aggressive,0.88,147,0.55,0.62,0.05,2019
+164,ringtone,100 gecs,hyperpop,euphoric,0.85,131,0.6,0.55,0.02,2019
+165,Vroom Vroom,Charli XCX,hyperpop,confident,0.83,133,0.55,0.7,0.01,2016
+166,360,Charli XCX,hyperpop,confident,0.78,120,0.7,0.8,0.01,2024
+167,Von dutch,Charli XCX,hyperpop,intense,0.9,130,0.4,0.7,0.0,2024
+168,Immaterial,SOPHIE,hyperpop,euphoric,0.86,124,0.7,0.7,0.01,2018
+169,Faceshopping,SOPHIE,hyperpop,intense,0.85,106,0.35,0.6,0.01,2018
+170,Flamboyant,Dorian Electra,hyperpop,playful,0.8,128,0.7,0.75,0.02,2019
+171,Hey QT,QT,hyperpop,playful,0.82,128,0.85,0.7,0.02,2014

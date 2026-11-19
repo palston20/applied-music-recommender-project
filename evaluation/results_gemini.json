@@ -1,0 +1,651 @@
+{
+  "llm": "gemini",
+  "summary": {
+    "cases": 16,
+    "overall_pass_rate": 1.0,
+    "evaluator_pass_rate": 1.0,
+    "expectation_pass_rate": 1.0,
+    "avg_relevance": 82.14,
+    "avg_expectation_alignment": 0.984,
+    "avg_artist_diversity": 1.0,
+    "duplicate_rate": 0.0,
+    "constrained_cases": 5,
+    "constraint_satisfaction_rate": 1.0,
+    "length_accuracy": 1.0,
+    "first_try_valid_output_rate": 1.0,
+    "cases_using_revision": 0,
+    "copy_valid_rate": 0.688
+  },
+  "cases": [
+    {
+      "id": "main_character",
+      "request": "Give me main character energy.",
+      "title": "Main Character Hours",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 95.24,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": false,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "write copy: patched"
+      ],
+      "tracks": [
+        "Hollaback Girl — Gwen Stefani (pop/confident, 0.76, 2005)",
+        "Since U Been Gone — Kelly Clarkson (pop/confident, 0.85, 2004)",
+        "360 — Charli XCX (hyperpop/confident, 0.78, 2024) ✦",
+        "Flowers — Miley Cyrus (pop/confident, 0.69, 2023)",
+        "Don't Start Now — Dua Lipa (disco/confident, 0.79, 2019) ✦",
+        "Espresso — Sabrina Carpenter (pop/confident, 0.76, 2024)"
+      ]
+    },
+    {
+      "id": "rainy_day",
+      "request": "I want music for romanticizing my life on a rainy day.",
+      "title": "Puddles and Daydreams",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 84.29,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Apocalypse — Cigarettes After Sex (indie/dreamy, 0.47, 2017)",
+        "Space Song — Beach House (indie/dreamy, 0.52, 2015)",
+        "Innerbloom — RÜFÜS DU SOL (electronic/dreamy, 0.45, 2015) ✦",
+        "Bags — Clairo (indie/wistful, 0.45, 2019)",
+        "Dreams — Fleetwood Mac (rock/dreamy, 0.49, 1977) ✦",
+        "An Ending (Ascent) — Brian Eno (ambient/dreamy, 0.1, 1983)"
+      ]
+    },
+    {
+      "id": "going_out",
+      "request": "I'm getting ready to go out with my friends. Give me confident, mysterious energy.",
+      "title": "Shadows and Stilettos",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 95.24,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Hollaback Girl — Gwen Stefani (pop/confident, 0.76, 2005)",
+        "Since U Been Gone — Kelly Clarkson (pop/confident, 0.85, 2004)",
+        "360 — Charli XCX (hyperpop/confident, 0.78, 2024) ✦",
+        "Flowers — Miley Cyrus (pop/confident, 0.69, 2023)",
+        "Don't Start Now — Dua Lipa (disco/confident, 0.79, 2019) ✦",
+        "Espresso — Sabrina Carpenter (pop/confident, 0.76, 2024)"
+      ]
+    },
+    {
+      "id": "nostalgic_rnb_repair",
+      "request": "I want nostalgic 2000s R&B and pop.",
+      "title": "Rewind Club",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": true,
+      "overall_passed": true,
+      "avg_relevance": 75.05,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 0,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": false,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "write copy: patched"
+      ],
+      "tracks": [
+        "Dilemma — Nelly (r&b/romantic, 0.55, 2002)",
+        "Let Me Love You — Mario (r&b/romantic, 0.55, 2004)",
+        "Fallin' — Alicia Keys (r&b/melancholy, 0.6, 2001)",
+        "Foolish — Ashanti (r&b/wistful, 0.58, 2002)",
+        "So Sick — Ne-Yo (r&b/melancholy, 0.58, 2005)",
+        "We Belong Together — Mariah Carey (r&b/melancholy, 0.46, 2005)"
+      ]
+    },
+    {
+      "id": "night_drive",
+      "request": "Give me music for a late-night drive through the city.",
+      "title": "Neon Blur After Midnight",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 80.1,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 3,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Nightcall — Kavinsky (synthwave/moody, 0.62, 2010)",
+        "Running Up That Hill (A Deal with God) — Kate Bush (pop/moody, 0.55, 1985) ✦",
+        "Strobe — deadmau5 (electronic/focused, 0.57, 2009)",
+        "Anti-Hero — Taylor Swift (pop/moody, 0.64, 2022) ✦",
+        "One More Time — Daft Punk (electronic/euphoric, 0.7, 2000)",
+        "Chamber of Reflection — Mac DeMarco (indie/moody, 0.45, 2014) ✦"
+      ]
+    },
+    {
+      "id": "study_familiar",
+      "request": "Deep focus study session, nothing distracting, keep it familiar.",
+      "title": "Quiet Mind Sanctuary",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 68.04,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 0,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Weightless — Marconi Union (ambient/chill, 0.06, 2011)",
+        "Gymnopédie No. 1 — Erik Satie (classical/focused, 0.03, 1888)",
+        "An Ending (Ascent) — Brian Eno (ambient/dreamy, 0.1, 1983)",
+        "Avril 14th — Aphex Twin (ambient/wistful, 0.03, 2001)",
+        "Nuvole Bianche — Ludovico Einaudi (classical/melancholy, 0.12, 2004)",
+        "Clair de Lune — Claude Debussy (classical/dreamy, 0.05, 1905)"
+      ]
+    },
+    {
+      "id": "gym_no_metal",
+      "request": "High-energy gym workout, no metal. 5 songs.",
+      "title": "Sweat, Beats, and Relentless Drive",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": true,
+      "overall_passed": true,
+      "avg_relevance": 84.99,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 5,
+      "discovery_tracks": 1,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Losing It — FISHER (electronic/intense, 0.93, 2018)",
+        "Turn Down for What — DJ Snake (electronic/intense, 0.8, 2013)",
+        "Von dutch — Charli XCX (hyperpop/intense, 0.9, 2024) ✦",
+        "Bye Bye Bye — *NSYNC (pop/intense, 0.93, 2000)",
+        "Since U Been Gone — Kelly Clarkson (pop/confident, 0.85, 2004)"
+      ]
+    },
+    {
+      "id": "sunday_coffee_experimental",
+      "request": "Slow Sunday morning coffee. Surprise me with something new.",
+      "title": "Sunlit Mugs and Wooden Floors",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 75.37,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 3,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Banana Pancakes — Jack Johnson (folk/relaxed, 0.38, 2005)",
+        "Don't Cry — J Dilla (lofi/chill, 0.5, 2006) ✦",
+        "Weightless — Marconi Union (ambient/chill, 0.06, 2011)",
+        "Feather — Nujabes (lofi/chill, 0.53, 2005) ✦",
+        "Skinny Love — Bon Iver (folk/melancholy, 0.37, 2007)",
+        "Passionfruit — Drake (hip hop/chill, 0.46, 2017) ✦"
+      ]
+    },
+    {
+      "id": "heartbreak",
+      "request": "Heartbreak hours. Sad, slow songs, nothing upbeat. Just 4 tracks.",
+      "title": "Staring Out A Rainy Window",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 0.75,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": true,
+      "overall_passed": true,
+      "avg_relevance": 69.36,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 4,
+      "discovery_tracks": 1,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Coffee — beabadoobee (indie/romantic, 0.24, 2017)",
+        "An Ending (Ascent) — Brian Eno (ambient/dreamy, 0.1, 1983)",
+        "My Funny Valentine — Chet Baker (jazz/melancholy, 0.1, 1954) ✦",
+        "Nuvole Bianche — Ludovico Einaudi (classical/melancholy, 0.12, 2004)"
+      ]
+    },
+    {
+      "id": "beach_bad_copy",
+      "request": "Beach day with my besties, carefree summer vibes.",
+      "title": "Saltwater, Sunshine, and Besties",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 87.46,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Teenage Dream — Katy Perry (pop/happy, 0.8, 2010)",
+        "I Wanna Dance with Somebody (Who Loves Me) — Whitney Houston (pop/euphoric, 0.82, 1987)",
+        "Dynamite — BTS (k-pop/happy, 0.77, 2020) ✦",
+        "Green Light — Lorde (pop/euphoric, 0.8, 2017)",
+        "Riptide — Vance Joy (folk/happy, 0.73, 2013) ✦",
+        "September — Earth, Wind & Fire (disco/happy, 0.83, 1978)"
+      ]
+    },
+    {
+      "id": "malformed_json",
+      "request": "Something to clean my room to, upbeat but not too crazy.",
+      "title": "Golden Static",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 75.01,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": false,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "write copy: patched"
+      ],
+      "tracks": [
+        "Flowers — Miley Cyrus (pop/confident, 0.69, 2023)",
+        "Running Up That Hill (A Deal with God) — Kate Bush (pop/moody, 0.55, 1985)",
+        "Ain't No Mountain High Enough — Marvin Gaye (soul/happy, 0.58, 1967) ✦",
+        "Plastic Love — Mariya Takeuchi (pop/nostalgic, 0.66, 1984)",
+        "Lovely Day — Bill Withers (soul/happy, 0.65, 1977) ✦",
+        "Golden Hour — JVKE (pop/romantic, 0.59, 2022)"
+      ]
+    },
+    {
+      "id": "angry_needs_revision",
+      "request": "I need angry music to blow off steam, just 4 songs.",
+      "title": "Scream Into The Void",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 97.36,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 4,
+      "discovery_tracks": 1,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "Chop Suey! — System of a Down (metal/aggressive, 0.93, 2001)",
+        "Duality — Slipknot (metal/aggressive, 0.96, 2004)",
+        "money machine — 100 gecs (hyperpop/aggressive, 0.88, 2019) ✦",
+        "Master of Puppets — Metallica (metal/aggressive, 0.84, 1986)"
+      ]
+    },
+    {
+      "id": "road_trip_guard",
+      "request": "Road trip with the windows down, no country please.",
+      "title": "Golden Static",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": true,
+      "overall_passed": true,
+      "avg_relevance": 83.08,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": false,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "write copy: patched"
+      ],
+      "tracks": [
+        "Teenage Dream — Katy Perry (pop/happy, 0.8, 2010)",
+        "Riptide — Vance Joy (folk/happy, 0.73, 2013)",
+        "Dynamite — BTS (k-pop/happy, 0.77, 2020) ✦",
+        "Sweet Child O' Mine — Guns N' Roses (rock/euphoric, 0.91, 1987)",
+        "September — Earth, Wind & Fire (disco/happy, 0.83, 1978) ✦",
+        "Mr. Brightside — The Killers (rock/euphoric, 0.92, 2004)"
+      ]
+    },
+    {
+      "id": "kpop_getting_ready",
+      "request": "K-pop for getting ready — confident but cute.",
+      "title": "Sassy, Glossy, And Ready To Go",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 86.85,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "LOVE DIVE — IVE (k-pop/confident, 0.7, 2022)",
+        "Pink Venom — BLACKPINK (k-pop/confident, 0.7, 2022)",
+        "360 — Charli XCX (hyperpop/confident, 0.78, 2024) ✦",
+        "Super Shy — NewJeans (k-pop/playful, 0.8, 2023)",
+        "Don't Start Now — Dua Lipa (disco/confident, 0.79, 2019) ✦",
+        "Dynamite — BTS (k-pop/happy, 0.77, 2020)"
+      ]
+    },
+    {
+      "id": "nineties_hip_hop_era",
+      "request": "90s hip hop for a summer cookout.",
+      "title": "Golden Static",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": true,
+      "overall_passed": true,
+      "avg_relevance": 63.61,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 0,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": false,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "write copy: patched"
+      ],
+      "tracks": [
+        "Juicy — The Notorious B.I.G. (hip hop/nostalgic, 0.67, 1994)",
+        "Nuthin' But a 'G' Thang — Dr. Dre (hip hop/relaxed, 0.55, 1992)",
+        "Electric Relaxation — A Tribe Called Quest (hip hop/relaxed, 0.55, 1993)",
+        "No Scrubs — TLC (r&b/confident, 0.68, 1999)",
+        "Say My Name — Destiny's Child (r&b/moody, 0.75, 1999)",
+        "Ex-Factor — Lauryn Hill (r&b/melancholy, 0.52, 1998)"
+      ]
+    },
+    {
+      "id": "hyperpop_named_genre",
+      "request": "Give me a hyperpop playlist.",
+      "title": "Glitch Out the Orbit",
+      "evaluator_passed": true,
+      "expectations": {
+        "expectation_alignment": 1.0,
+        "constraints_satisfied": true,
+        "constraint_violations": [],
+        "length_ok": true,
+        "passed": true
+      },
+      "has_constraints": false,
+      "overall_passed": true,
+      "avg_relevance": 93.21,
+      "artist_diversity": 1.0,
+      "duplicates": 0,
+      "track_count": 6,
+      "discovery_tracks": 2,
+      "first_output_valid": true,
+      "revisions_used": 0,
+      "copy_valid": true,
+      "failed_checks": [],
+      "trace": [
+        "llm:interpret: called",
+        "interpret: ok",
+        "rank+curate: attempt 1",
+        "evaluate: pass",
+        "llm:copy: called",
+        "write copy: ok"
+      ],
+      "tracks": [
+        "ringtone — 100 gecs (hyperpop/euphoric, 0.85, 2019)",
+        "Immaterial — SOPHIE (hyperpop/euphoric, 0.86, 2018)",
+        "Sweet Child O' Mine — Guns N' Roses (rock/euphoric, 0.91, 1987) ✦",
+        "Von dutch — Charli XCX (hyperpop/intense, 0.9, 2024)",
+        "I Feel Love — Donna Summer (disco/euphoric, 0.83, 1977) ✦",
+        "Hey QT — QT (hyperpop/playful, 0.82, 2014)"
+      ]
+    }
+  ]
+}
