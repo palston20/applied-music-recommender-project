@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Soundtrack AI</title>
+  <meta name="description" content="Describe a vibe. Your AI DJ builds the playlist.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎧</text></svg>">
+  <link rel="stylesheet" href="/web/styles.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Library">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+        </span>
+        <span class="brand-name">Soundtrack <b>AI</b></span>
+      </div>
+      <nav class="nav">
+        <button class="nav-item active" id="nav-new" type="button">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg>
+          New vibe
+        </button>
+      </nav>
+      <div class="library">
+        <div class="library-head">
+          <span>Your vibes</span>
+          <button class="ghost tiny" id="clear-history" type="button" title="Clear history">Clear</button>
+        </div>
+        <ul id="history" class="history"></ul>
+        <p class="history-empty" id="history-empty">Playlists you spin show up here.</p>
+      </div>
+      <div class="engine" id="engine">
+        <span class="dot"></span><span id="engine-label">Connecting…</span>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main" id="main">
+      <section class="composer" id="composer" aria-labelledby="composer-title">
+        <p class="eyebrow" id="greeting">Good evening</p>
+        <h1 id="composer-title">What's the vibe?</h1>
+        <p class="sub">Describe a mood, a moment, an aesthetic, or who you want to feel like. Your DJ handles the rest.</p>
+
+        <form id="vibe-form" class="prompt-card" autocomplete="off">
+          <label class="sr-only" for="request">Describe your vibe</label>
+          <textarea id="request" rows="2" maxlength="400"
+            placeholder="e.g. romanticizing my life on a rainy day ☔"></textarea>
+
+          <div class="chips" id="chips" aria-label="Try one of these"></div>
+
+          <div class="controls">
+            <fieldset class="segmented" aria-label="Discovery level">
+              <legend class="control-label">Discovery</legend>
+              <div class="seg-track">
+                <input type="radio" name="discovery" id="d-auto" value="" checked>
+                <label for="d-auto">Auto</label>
+                <input type="radio" name="discovery" id="d-familiar" value="familiar">
+                <label for="d-familiar">Familiar</label>
+                <input type="radio" name="discovery" id="d-balanced" value="balanced">
+                <label for="d-balanced">Balanced</label>
+                <input type="radio" name="discovery" id="d-experimental" value="experimental">
+                <label for="d-experimental">Experimental</label>
+              </div>
+              <p class="hint" id="discovery-hint">Let the DJ read it from your words.</p>
+            </fieldset>
+
+            <div class="stepper-wrap">
+              <span class="control-label" id="len-label">Tracks</span>
+              <div class="stepper" role="group" aria-labelledby="len-label">
+                <button type="button" id="len-minus" aria-label="Fewer tracks">−</button>
+                <output id="len-value" aria-live="polite">Auto</output>
+                <button type="button" id="len-plus" aria-label="More tracks">+</button>
+              </div>
+            </div>
+
+            <button class="spin" id="spin" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <span>Spin it</span>
+            </button>
+          </div>
+        </form>
+        <p class="error" id="error" role="alert" hidden></p>
+      </section>
+
+      <!-- Loading -->
+      <section class="loading" id="loading" hidden aria-live="polite">
+        <div class="eq" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+        <p id="loading-text">Reading the room…</p>
+      </section>
+
+      <!-- Result -->
+      <section class="result" id="result" hidden>
+        <header class="hero" id="hero">
+          <div class="cover" id="cover" aria-hidden="true">
+            <div class="cover-vinyl"></div>
+            <div class="cover-text">
+              <span class="cover-brand">Soundtrack AI</span>
+              <span class="cover-title" id="cover-title"></span>
+            </div>
+          </div>
+          <div class="hero-meta">
+            <p class="eyebrow">AI DJ playlist</p>
+            <h2 id="pl-title"></h2>
+            <p class="pl-desc" id="pl-desc"></p>
+            <p class="pl-request" id="pl-request"></p>
+            <p class="pl-stats" id="pl-stats"></p>
+          </div>
+        </header>
+
+        <div class="actionbar">
+          <button class="play-big" id="play-all" type="button" aria-label="Play preview">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="ghost" id="respin" type="button">↻ Respin</button>
+          <button class="ghost" id="copy-list" type="button">Copy tracklist</button>
+          <span class="badge" id="qc-badge"></span>
+        </div>
+
+        <div class="tags" id="tags"></div>
+
+        <div class="tracklist" role="table" aria-label="Tracks">
+          <div class="tl-head" role="row">
+            <span role="columnheader">#</span>
+            <span role="columnheader">Title</span>
+            <span role="columnheader" class="col-vibe">Vibe</span>
+            <span role="columnheader" class="col-energy">Energy</span>
+            <span role="columnheader" class="col-match">Match</span>
+          </div>
+          <ol id="tracks" class="tl-body"></ol>
+        </div>
+
+        <div class="panels">
+          <section class="panel" aria-labelledby="qc-title">
+            <h3 id="qc-title">DJ quality check</h3>
+            <ul class="checks" id="checks"></ul>
+            <ul class="notes" id="notes"></ul>
+          </section>
+          <section class="panel" aria-labelledby="mind-title">
+            <h3 id="mind-title">How your DJ heard you</h3>
+            <dl class="prefs" id="prefs"></dl>
+            <details class="trace">
+              <summary>Agent steps</summary>
+              <ol id="trace"></ol>
+            </details>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Now playing -->
+    <footer class="nowplaying" id="nowplaying" hidden>
+      <div class="np-track">
+        <div class="np-art" id="np-art"></div>
+        <div>
+          <div class="np-title" id="np-title"></div>
+          <div class="np-artist" id="np-artist"></div>
+        </div>
+      </div>
+      <div class="np-controls">
+        <button class="ghost icon" id="np-prev" type="button" aria-label="Previous">
+          <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg></button>
+        <button class="np-play" id="np-play" type="button" aria-label="Pause">
+          <svg viewBox="0 0 24 24" id="np-icon"><path d="M6 5h4v14H6zm8 0h4v14h-4z"/></svg></button>
+        <button class="ghost icon" id="np-next" type="button" aria-label="Next">
+          <svg viewBox="0 0 24 24"><path d="M16 6h2v12h-2zM6 18l8.5-6L6 6z"/></svg></button>
+      </div>
+      <div class="np-viz" aria-hidden="true" id="np-viz"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      <a class="np-listen" id="np-listen" href="#" target="_blank" rel="noopener noreferrer">Play on Spotify ↗</a>
+    </footer>
+  </div>
+  <script src="/web/app.js"></script>
+</body>
+</html>

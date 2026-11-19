@@ -1,0 +1,847 @@
+[
+  {
+    "id": "main_character",
+    "request": "Give me main character energy.",
+    "mock": {
+      "interpret": {
+        "mood": "confident",
+        "genre": "pop",
+        "energy": 0.78,
+        "context": "everyday life as a movie",
+        "aesthetic": "cinematic, self-assured, glossy",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "hip hop",
+          "r&b"
+        ],
+        "related_moods": [
+          "euphoric"
+        ]
+      },
+      "copy": {
+        "title": "Cue the Slow-Motion Walk",
+        "description": "You're the lead, the city is the set, and every song knows it."
+      }
+    },
+    "expect": {
+      "genres": [
+        "pop",
+        "hip hop",
+        "r&b",
+        "k-pop",
+        "disco",
+        "funk"
+      ],
+      "moods": [
+        "confident",
+        "euphoric",
+        "playful"
+      ],
+      "energy": [
+        0.55,
+        1.0
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "rainy_day",
+    "request": "I want music for romanticizing my life on a rainy day.",
+    "mock": {
+      "interpret": {
+        "mood": "wistful",
+        "genre": "indie",
+        "energy": 0.45,
+        "context": "rainy day at home",
+        "aesthetic": "soft, cinematic, cozy",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "folk",
+          "r&b"
+        ],
+        "related_moods": [
+          "dreamy",
+          "romantic"
+        ]
+      },
+      "copy": {
+        "title": "Window Seat Weather",
+        "description": "Raindrops on glass and a main-plot daydream."
+      }
+    },
+    "expect": {
+      "genres": [
+        "indie",
+        "folk",
+        "r&b",
+        "jazz",
+        "classical",
+        "ambient",
+        "lofi",
+        "soul"
+      ],
+      "moods": [
+        "wistful",
+        "dreamy",
+        "romantic",
+        "melancholy",
+        "chill",
+        "relaxed"
+      ],
+      "energy": [
+        0.1,
+        0.7
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "going_out",
+    "request": "I'm getting ready to go out with my friends. Give me confident, mysterious energy.",
+    "mock": {
+      "interpret": {
+        "mood": "confident",
+        "genre": "r&b",
+        "energy": 0.75,
+        "context": "getting ready to go out",
+        "aesthetic": "confident, mysterious, after-dark",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "pop",
+          "hip hop",
+          "electronic"
+        ],
+        "related_moods": [
+          "moody"
+        ]
+      },
+      "copy": {
+        "title": "Eyeliner & Neon",
+        "description": "Mirror check, last spritz, walk in like you own the place."
+      }
+    },
+    "expect": {
+      "genres": [
+        "r&b",
+        "pop",
+        "hip hop",
+        "electronic",
+        "k-pop",
+        "synthwave"
+      ],
+      "moods": [
+        "confident",
+        "moody",
+        "playful"
+      ],
+      "energy": [
+        0.55,
+        1.0
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "nostalgic_rnb_repair",
+    "request": "I want nostalgic 2000s R&B and pop.",
+    "note": "LLM first jams the era into the genre ('2000s r&b'), which is not a catalog genre; the agent spends its one revision on a repair prompt.",
+    "mock": {
+      "interpret": {
+        "mood": "nostalgic",
+        "genre": "2000s r&b",
+        "energy": 0.65,
+        "context": "throwback listening",
+        "aesthetic": "Y2K, glossy, sentimental",
+        "discovery_level": "balanced",
+        "playlist_length": 6
+      },
+      "repair": {
+        "mood": "romantic",
+        "genre": "r&b",
+        "energy": 0.65,
+        "context": "throwback listening",
+        "aesthetic": "Y2K, glossy, sentimental",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "pop"
+        ],
+        "related_moods": [
+          "confident",
+          "playful"
+        ],
+        "decades": [
+          "2000s"
+        ],
+        "named_genres": [
+          "r&b",
+          "pop"
+        ]
+      },
+      "copy": {
+        "title": "Burned CD Era",
+        "description": "Glossy, sentimental, a little bit flip phone."
+      }
+    },
+    "expect": {
+      "genres": [
+        "r&b",
+        "pop",
+        "hip hop",
+        "soul"
+      ],
+      "moods": [
+        "romantic",
+        "confident",
+        "playful",
+        "melancholy",
+        "wistful",
+        "moody",
+        "nostalgic",
+        "happy"
+      ],
+      "energy": [
+        0.4,
+        0.95
+      ],
+      "length": 6,
+      "decades": [
+        2000
+      ]
+    }
+  },
+  {
+    "id": "night_drive",
+    "request": "Give me music for a late-night drive through the city.",
+    "discovery": "experimental",
+    "mock": {
+      "interpret": {
+        "mood": "moody",
+        "genre": "synthwave",
+        "energy": 0.62,
+        "context": "late-night city drive",
+        "aesthetic": "neon, cinematic, mysterious",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "electronic",
+          "r&b"
+        ],
+        "related_moods": [
+          "dreamy"
+        ]
+      },
+      "copy": {
+        "title": "After Hours Neon",
+        "description": "Streetlights smear across the windshield and the city goes quiet."
+      }
+    },
+    "expect": {
+      "genres": [
+        "synthwave",
+        "electronic",
+        "r&b",
+        "indie",
+        "pop",
+        "hip hop",
+        "rock"
+      ],
+      "moods": [
+        "moody",
+        "dreamy",
+        "chill",
+        "wistful",
+        "romantic"
+      ],
+      "energy": [
+        0.35,
+        0.85
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "study_familiar",
+    "request": "Deep focus study session, nothing distracting, keep it familiar.",
+    "mock": {
+      "interpret": {
+        "mood": "focused",
+        "genre": "lofi",
+        "energy": 0.35,
+        "context": "studying",
+        "aesthetic": "steady, warm, unobtrusive",
+        "discovery_level": "familiar",
+        "playlist_length": 5,
+        "related_genres": [
+          "classical",
+          "electronic",
+          "ambient"
+        ],
+        "related_moods": [
+          "chill"
+        ]
+      },
+      "copy": {
+        "title": "Deep Work Mode",
+        "description": "Steady sounds that keep the noise out."
+      }
+    },
+    "expect": {
+      "genres": [
+        "lofi",
+        "classical",
+        "ambient",
+        "electronic",
+        "jazz"
+      ],
+      "moods": [
+        "focused",
+        "chill",
+        "relaxed",
+        "dreamy"
+      ],
+      "energy": [
+        0.0,
+        0.6
+      ],
+      "length": null
+    }
+  },
+  {
+    "id": "gym_no_metal",
+    "request": "High-energy gym workout, no metal. 5 songs.",
+    "mock": {
+      "interpret": {
+        "mood": "intense",
+        "genre": "hip hop",
+        "energy": 0.88,
+        "context": "gym workout",
+        "aesthetic": "sweaty, driven, loud",
+        "discovery_level": "balanced",
+        "playlist_length": 5,
+        "related_genres": [
+          "rock",
+          "electronic",
+          "pop"
+        ],
+        "related_moods": [
+          "confident"
+        ],
+        "exclude_genres": [
+          "metal"
+        ],
+        "min_energy": 0.7
+      },
+      "copy": {
+        "title": "Redline Reps",
+        "description": "Full throttle, no cooldown, no metal."
+      }
+    },
+    "expect": {
+      "genres": [
+        "hip hop",
+        "rock",
+        "electronic",
+        "pop"
+      ],
+      "moods": [
+        "intense",
+        "confident",
+        "aggressive",
+        "euphoric"
+      ],
+      "energy": [
+        0.7,
+        1.0
+      ],
+      "length": 5,
+      "constraints": {
+        "exclude_genres": [
+          "metal"
+        ],
+        "min_energy": 0.7
+      }
+    }
+  },
+  {
+    "id": "sunday_coffee_experimental",
+    "request": "Slow Sunday morning coffee. Surprise me with something new.",
+    "mock": {
+      "interpret": {
+        "mood": "relaxed",
+        "genre": "jazz",
+        "energy": 0.35,
+        "context": "Sunday morning coffee",
+        "aesthetic": "warm, slow, sunlit",
+        "discovery_level": "experimental",
+        "playlist_length": 6,
+        "related_genres": [
+          "soul",
+          "folk"
+        ],
+        "related_moods": [
+          "chill",
+          "romantic"
+        ]
+      },
+      "copy": {
+        "title": "Slow Pour Sunday",
+        "description": "Coffee steam, open windows, and a few curveballs."
+      }
+    },
+    "expect": {
+      "genres": [
+        "jazz",
+        "soul",
+        "folk",
+        "lofi",
+        "r&b",
+        "indie",
+        "classical",
+        "reggae",
+        "hip hop"
+      ],
+      "moods": [
+        "relaxed",
+        "chill",
+        "romantic",
+        "happy",
+        "wistful",
+        "dreamy"
+      ],
+      "energy": [
+        0.05,
+        0.65
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "heartbreak",
+    "request": "Heartbreak hours. Sad, slow songs, nothing upbeat. Just 4 tracks.",
+    "mock": {
+      "interpret": {
+        "mood": "melancholy",
+        "genre": "r&b",
+        "energy": 0.45,
+        "context": "processing a breakup",
+        "aesthetic": "raw, late-night, tender",
+        "discovery_level": "balanced",
+        "playlist_length": 4,
+        "related_genres": [
+          "folk",
+          "pop",
+          "indie"
+        ],
+        "related_moods": [
+          "wistful"
+        ],
+        "max_energy": 0.6
+      },
+      "copy": {
+        "title": "Blue Hour Letters",
+        "description": "For the feelings you don't text back."
+      }
+    },
+    "expect": {
+      "genres": [
+        "r&b",
+        "folk",
+        "pop",
+        "indie",
+        "rock",
+        "country",
+        "jazz",
+        "classical"
+      ],
+      "moods": [
+        "melancholy",
+        "wistful"
+      ],
+      "energy": [
+        0.0,
+        0.6
+      ],
+      "length": 4,
+      "constraints": {
+        "max_energy": 0.6
+      }
+    }
+  },
+  {
+    "id": "beach_bad_copy",
+    "request": "Beach day with my besties, carefree summer vibes.",
+    "note": "The copy step returns a blurb for a track that is not in the playlist; the agent must patch it.",
+    "mock": {
+      "interpret": {
+        "mood": "happy",
+        "genre": "reggae",
+        "energy": 0.65,
+        "context": "beach day with friends",
+        "aesthetic": "sun-soaked, breezy, golden",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "afrobeats",
+          "reggaeton",
+          "pop"
+        ],
+        "related_moods": [
+          "playful",
+          "euphoric"
+        ]
+      },
+      "copy": "BAD_COPY"
+    },
+    "expect": {
+      "genres": [
+        "reggae",
+        "afrobeats",
+        "reggaeton",
+        "pop",
+        "disco",
+        "soul",
+        "folk",
+        "k-pop",
+        "funk"
+      ],
+      "moods": [
+        "happy",
+        "playful",
+        "euphoric",
+        "relaxed",
+        "romantic"
+      ],
+      "energy": [
+        0.4,
+        0.95
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "malformed_json",
+    "request": "Something to clean my room to, upbeat but not too crazy.",
+    "note": "First LLM output is chatty prose instead of JSON; repair prompt fixes it.",
+    "mock": {
+      "interpret": "Sure! For cleaning I'd go with upbeat pop and some disco around medium-high energy :)",
+      "repair": {
+        "mood": "happy",
+        "genre": "pop",
+        "energy": 0.72,
+        "context": "cleaning my room",
+        "aesthetic": "bright, bouncy, productive",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "disco",
+          "funk",
+          "soul"
+        ],
+        "related_moods": [
+          "playful"
+        ]
+      },
+      "copy": {
+        "title": "Sparkle Sweep",
+        "description": "Bright, bouncy, and just fast enough to finish the job."
+      }
+    },
+    "expect": {
+      "genres": [
+        "pop",
+        "disco",
+        "funk",
+        "soul",
+        "k-pop",
+        "hip hop"
+      ],
+      "moods": [
+        "happy",
+        "playful",
+        "confident",
+        "euphoric"
+      ],
+      "energy": [
+        0.5,
+        0.95
+      ],
+      "length": 6
+    }
+  },
+  {
+    "id": "angry_needs_revision",
+    "request": "I need angry music to blow off steam, just 4 songs.",
+    "note": "First interpretation reads 'blow off steam' as calming down and caps energy at 0.3, which shuts out every aggressive song; the evaluator fails it and the single revision fixes it.",
+    "mock": {
+      "interpret": {
+        "mood": "aggressive",
+        "genre": "metal",
+        "energy": 0.9,
+        "context": "venting",
+        "aesthetic": "dramatic, stormy",
+        "discovery_level": "familiar",
+        "playlist_length": 4,
+        "related_genres": [
+          "rock"
+        ],
+        "max_energy": 0.3
+      },
+      "revise": {
+        "mood": "aggressive",
+        "genre": "metal",
+        "energy": 0.9,
+        "context": "venting",
+        "aesthetic": "loud, cathartic",
+        "discovery_level": "familiar",
+        "playlist_length": 4,
+        "related_genres": [
+          "rock",
+          "hip hop"
+        ],
+        "related_moods": [
+          "intense"
+        ]
+      },
+      "copy": {
+        "title": "Pressure Release Valve",
+        "description": "Loud, heavy, and exactly as cathartic as you need."
+      }
+    },
+    "expect": {
+      "genres": [
+        "metal",
+        "rock",
+        "hip hop",
+        "electronic"
+      ],
+      "moods": [
+        "aggressive",
+        "intense"
+      ],
+      "energy": [
+        0.7,
+        1.0
+      ],
+      "length": 4
+    }
+  },
+  {
+    "id": "road_trip_guard",
+    "request": "Road trip with the windows down, no country please.",
+    "note": "The mocked LLM forgets the explicit exclusion and even picks country; the deterministic constraint guard enforces it.",
+    "mock": {
+      "interpret": {
+        "mood": "euphoric",
+        "genre": "country",
+        "energy": 0.8,
+        "context": "road trip",
+        "aesthetic": "open road, sunny, free",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "rock",
+          "pop",
+          "folk"
+        ],
+        "related_moods": [
+          "happy"
+        ]
+      },
+      "copy": {
+        "title": "Windows Down, Volume Up",
+        "description": "Open road, warm air, zero country (as requested)."
+      }
+    },
+    "expect": {
+      "genres": [
+        "rock",
+        "pop",
+        "folk",
+        "indie",
+        "electronic",
+        "disco"
+      ],
+      "moods": [
+        "euphoric",
+        "happy",
+        "confident",
+        "playful",
+        "nostalgic"
+      ],
+      "energy": [
+        0.55,
+        1.0
+      ],
+      "length": 6,
+      "constraints": {
+        "exclude_genres": [
+          "country"
+        ]
+      }
+    }
+  },
+  {
+    "id": "kpop_getting_ready",
+    "request": "K-pop for getting ready — confident but cute.",
+    "mock": {
+      "interpret": {
+        "mood": "confident",
+        "genre": "k-pop",
+        "energy": 0.72,
+        "context": "getting ready",
+        "aesthetic": "glossy, cute, self-assured",
+        "discovery_level": "balanced",
+        "playlist_length": 5,
+        "related_genres": [
+          "pop"
+        ],
+        "related_moods": [
+          "playful"
+        ],
+        "named_genres": [
+          "k-pop"
+        ]
+      },
+      "copy": {
+        "title": "Lip Gloss & Bass",
+        "description": "Five songs, one perfect winged liner."
+      }
+    },
+    "expect": {
+      "genres": [
+        "k-pop",
+        "pop"
+      ],
+      "moods": [
+        "confident",
+        "playful",
+        "happy",
+        "dreamy"
+      ],
+      "energy": [
+        0.55,
+        0.95
+      ],
+      "length": null
+    }
+  },
+  {
+    "id": "nineties_hip_hop_era",
+    "request": "90s hip hop for a summer cookout.",
+    "mock": {
+      "interpret": {
+        "mood": "relaxed",
+        "genre": "hip hop",
+        "energy": 0.6,
+        "context": "summer cookout",
+        "aesthetic": "sunny, laid-back, nostalgic",
+        "discovery_level": "balanced",
+        "playlist_length": 5,
+        "related_genres": [
+          "r&b",
+          "funk",
+          "soul"
+        ],
+        "related_moods": [
+          "happy",
+          "nostalgic"
+        ],
+        "decades": [
+          "90s"
+        ],
+        "named_genres": [
+          "hip hop"
+        ]
+      },
+      "copy": {
+        "title": "Grill Smoke & Golden Era",
+        "description": "Laid-back 90s classics for the backyard."
+      }
+    },
+    "expect": {
+      "genres": [
+        "hip hop",
+        "r&b",
+        "funk",
+        "soul",
+        "pop"
+      ],
+      "moods": [
+        "relaxed",
+        "happy",
+        "nostalgic",
+        "confident",
+        "playful",
+        "moody",
+        "melancholy"
+      ],
+      "energy": [
+        0.4,
+        0.85
+      ],
+      "length": null,
+      "decades": [
+        1990
+      ]
+    }
+  },
+  {
+    "id": "hyperpop_named_genre",
+    "request": "Give me a hyperpop playlist.",
+    "note": "Regression for a user report: without named-genre priority, related genres (hip hop, r&b) crowded out hyperpop.",
+    "mock": {
+      "interpret": {
+        "mood": "playful",
+        "genre": "hyperpop",
+        "energy": 0.85,
+        "context": "general listening",
+        "aesthetic": "glitchy, maximal, chaotic-fun",
+        "discovery_level": "balanced",
+        "playlist_length": 6,
+        "related_genres": [
+          "electronic",
+          "pop",
+          "hip hop"
+        ],
+        "related_moods": [
+          "euphoric",
+          "confident"
+        ],
+        "named_genres": [
+          "hyperpop"
+        ]
+      },
+      "copy": {
+        "title": "Glitter Overload",
+        "description": "Pitched-up, maxed-out, and a little unhinged."
+      }
+    },
+    "expect": {
+      "genres": [
+        "hyperpop",
+        "electronic",
+        "pop"
+      ],
+      "moods": [
+        "playful",
+        "euphoric",
+        "confident",
+        "intense",
+        "aggressive"
+      ],
+      "energy": [
+        0.65,
+        1.0
+      ],
+      "length": 6,
+      "named_genres": [
+        "hyperpop"
+      ],
+      "named_share": 0.6
+    }
+  }
+]
